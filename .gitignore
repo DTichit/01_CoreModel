@@ -1,0 +1,4 @@
+*.pyc
+_src/__pycache__
+_src/_functions/__pycache__
+_src/output.txt
