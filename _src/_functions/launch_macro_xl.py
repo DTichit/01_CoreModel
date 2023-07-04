@@ -3,10 +3,6 @@ import xlwings as xw
 
 class LaunchMacroXL:
 
-    # Attributes
-    path_wb = "C://Users//DTichit//Downloads//Book1.xlsm"
-    macro_name = "HelloWorld"
-
 
     # Class
     def __init__(self) -> None:
