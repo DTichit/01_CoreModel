@@ -90,8 +90,12 @@ class Automate:
         # Handle begining of the runs
         self.handle_begin_runs()
         
+        # Number of runs t be launched
+        t_no_runs = self.main_sheet.get_no_runs()
+        print(t_no_runs)
+
         # Loop on all the runs
-        for run_id in range(3):
+        for run_id in range(t_no_runs):
 
             # Define row position for the given run
             ROW_POSITION = self.main_sheet.GetRowPosition(run_id)

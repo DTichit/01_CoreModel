@@ -1,14 +1,6 @@
-from datetime import datetime
-import glob as glob
-import importlib.util
-import sys
 import xlwings
-import os
 
 from constant import Constant
-
-
-
 
 
 class MainSheetControler:
@@ -75,3 +67,25 @@ class MainSheetControler:
     # Get run description
     def GetRunDescription(self, id_status):
         return(Constant.RUN_STATUS[str(id_status)])
+
+
+    # Get number of run to be launched : check on the colums ofrun status
+    def get_no_runs(self):
+
+            # Initialize count
+            t_count = 0
+
+            # Ignore headers
+            row = Constant.ROW_TABLE_HEADER + 1
+            
+            # Loop on the rows
+            while self.main_sheet.range(Constant.COL_BOOLEAN_RUN, row).value is not None:
+                t_count += 1
+                row += 1
+
+            
+            # Output
+            return(t_count)
+
+
+    

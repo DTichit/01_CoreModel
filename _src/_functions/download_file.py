@@ -1,12 +1,4 @@
-
-
-import requests 
 import xlwings as xw
-
-
-
-
-
 
 class DownloadFile:
 
